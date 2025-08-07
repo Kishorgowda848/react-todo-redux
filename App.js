@@ -4,6 +4,7 @@ import Listing from './src/component/listing';
 // import Provider from 'react-redux';
 import appStore from './src/utils/appStore';
 import { Provider } from 'react-redux';
+import About from './src/component/About';
 
 const root = createRoot(document.querySelector("#root"));
 
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
             {
                 path:'/',
                 element:<Listing/>
+            },
+            {
+              path:'/about',
+              element:<About/>
             }
         ]
     }
