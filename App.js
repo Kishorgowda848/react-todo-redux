@@ -5,12 +5,15 @@ import Listing from './src/component/listing';
 import appStore from './src/utils/appStore';
 import { Provider } from 'react-redux';
 import About from './src/component/About';
+import Header from './src/component/Header';
+import ContactUs from './src/component/Contactus';
 
 const root = createRoot(document.querySelector("#root"));
 
 const Layout = ()=>{
     return <>
      <p> Todo List</p>
+     <Header/>
      <Provider store={appStore}>
      <Outlet/>
      </Provider>
@@ -29,6 +32,10 @@ const router = createBrowserRouter([
             {
               path:'/about',
               element:<About/>
+            },
+            {
+                path:'/contact',
+                element:<ContactUs/>
             }
         ]
     }

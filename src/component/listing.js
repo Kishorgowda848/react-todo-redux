@@ -9,9 +9,7 @@ const Listing = () => {
     const dispatch = useDispatch();
 
     const onSubmit = (value) => {
-        // setTasks([...tasks, value]);
         dispatch(add(value));
-        console.log(value);
     }
 
 
