@@ -1,18 +1,6 @@
-import { useEffect, useState } from "react";
-import { API_URL, POST_ENDPOINT } from "../constants/constant";
+import usePost from "../utils/usePosts";
 const About = () => {
-
-    const [posts, setPost] = useState([]);
-
-    const fetchData = async () => {
-        const json = await fetch(API_URL + '/' + POST_ENDPOINT);
-        const data = await json.json();
-        setPost(data);
-    }
-
-    useEffect(() => {
-        fetchData();
-    }, []);
+    const posts = usePost();
 
     return <>
         <p>This are the list of post</p>
